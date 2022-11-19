@@ -11,10 +11,12 @@ public class MyService {
 
     @Autowired
     public MyService(MyComponent myComponent) {
+        System.out.println("MyService constructor has been called");
         this.myComponent = myComponent;
     }
 
     public String getName() {
+        System.out.println("MyService.getName() has been called");
         return this.myComponent.getMyComponentName();
     }
 }
